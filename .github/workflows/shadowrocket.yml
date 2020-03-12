@@ -33,9 +33,11 @@ jobs:
       run: python utils/gen_shadowrocket.py 
     - name: Commit files
       run: |
-        git config --local user.email "yueyericardo_bot@gmail.com"
-        git config --local user.name "yueyericardo_bot"
-        git commit -m "Deploy" -a
+        if [[ `git status --porcelain` ]]; then
+          git config --local user.email "yueyericardo_bot@gmail.com"
+          git config --local user.name "yueyericardo_bot"
+          git commit -m "Deploy" -a
+        fi
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
