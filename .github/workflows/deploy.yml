@@ -36,7 +36,7 @@ jobs:
       run: base64 -i backcn > backcn.txt
     # pac
     - name: Generate pac.js
-      run: genpac --gfwlist-local backcn.txt --pac-proxy "SOCKS5 127.0.0.1:1080" -o pac.js
+      run: genpac --format=pac --gfwlist-url - --gfwlist-local backcn.txt --pac-proxy "SOCKS5 127.0.0.1:1080;" -o pac.js --pac-precise 
     - name: Commit files
       run: |
         git config --local user.email "yueyericardo_bot@gmail.com"
