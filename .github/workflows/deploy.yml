@@ -28,6 +28,9 @@ jobs:
       uses: actions/setup-python@v1.2.0
       with:
         python-version: ${{ matrix.python-version }}
+    # gitpull
+    - name: git pull
+      run: git pull
     # install genpac
     - name: Install Dependency
       run: pip install gfwlist2pac
