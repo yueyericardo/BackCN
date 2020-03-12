@@ -21,10 +21,17 @@ localhost = 127.0.0.1
 
 template = "DOMAIN-SUFFIX,{},PROXY"
 proxy = ""
-f = open("../backcn", "r")
+f = open("backcn", "r")
 for line in f:
     if line[:2] == "||":
         proxy += template.format(line[2:-1]) + '\n'
 
 TIMESTAMP = "{0:%Y-%m-%d %H:%M:%S}".format(datetime.now())
-print(output.format(TIMESTAMP, proxy))
+# print(output.format(TIMESTAMP, proxy))
+
+f.close()
+
+# write file
+f = open("backcn.conf", "w")
+f.write(output.format(TIMESTAMP, proxy))
+f.close()
