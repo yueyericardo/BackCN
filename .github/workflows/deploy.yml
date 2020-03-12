@@ -19,7 +19,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6]
+        python-version: [2.7]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -30,13 +30,13 @@ jobs:
         python-version: ${{ matrix.python-version }}
     # install genpac
     - name: Install Dependency
-      run: pip install genpac
+      run: pip install gfwlist2pac
     # back.txt
     - name: Generate backcn.txt
       run: base64 -i backcn > backcn.txt
     # pac
     - name: Generate pac.js
-      run: genpac --format=pac --gfwlist-url - --gfwlist-local backcn.txt --pac-proxy "SOCKS5 127.0.0.1:1080;" -o pac.js --pac-precise 
+      run:  gfwlist2pac -i backcn.txt -f pac.js --precise
     - name: Commit files
       run: |
         git config --local user.email "yueyericardo_bot@gmail.com"
