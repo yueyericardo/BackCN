@@ -1,0 +1,53 @@
+# This is a basic workflow to help you get started with Actions
+
+name: gen
+
+# Controls when the action will run. Triggers the workflow on push or pull request 
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [2.7]
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1.2.0
+      with:
+        python-version: ${{ matrix.python-version }}
+    # gitpull
+    - name: git pull
+      run: git pull
+    # install genpac
+    - name: Install Dependency
+      run: pip install gfwlist2pac
+    # back.txt
+    - name: Generate backcn.txt
+      run: base64 -i backcn > backcn.txt
+    # pac
+    - name: Generate pac.js
+      run:  gfwlist2pac -i backcn.txt -f pac.js -p "SOCKS5 127.0.0.1:1080" --precise 
+    - name: Commit files
+      run: |
+        if [[ `git status --porcelain` ]]; then
+          git config --local user.email "yueyericardo_bot@gmail.com"
+          git config --local user.name "yueyericardo_bot"
+          git commit -m "Deploy" -a
+        fi
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.TOKEN }}
