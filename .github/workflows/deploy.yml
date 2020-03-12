@@ -28,9 +28,6 @@ jobs:
       uses: actions/setup-python@v1.2.0
       with:
         python-version: ${{ matrix.python-version }}
-    # gitpull
-    - name: git pull
-      run: git pull
     # install genpac
     - name: Install Dependency
       run: pip install gfwlist2pac
@@ -47,6 +44,9 @@ jobs:
           git config --local user.name "yueyericardo_bot"
           git commit -m "Deploy" -a
         fi
+    # gitpull
+    - name: git pull
+      run: git pull
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
