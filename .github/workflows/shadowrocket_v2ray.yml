@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: shadowrocket
+name: shadowrocket_v2ray
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the master branch
@@ -31,6 +31,10 @@ jobs:
     # generate
     - name: Generate backcn.conf
       run: python utils/gen_shadowrocket.py 
+    - name: Generate site/proxy
+      run: python utils/gen_proxy.py
+    - name: generate back.dat for v2ray
+      run: ./utils/v2sitedat -dir site -dat backcn.dat
     - name: Commit files
       run: |
         if [[ `git status --porcelain` ]]; then
