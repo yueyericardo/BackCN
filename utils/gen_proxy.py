@@ -9,6 +9,6 @@ for line in f:
 f.close()
 
 # write file
-f = open("site/cn", "w")
+f = open("site/proxy", "w")
 f.write(proxy)
 f.close()
