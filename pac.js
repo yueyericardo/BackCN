@@ -6,9 +6,9 @@ var proxy = "SOCKS5 127.0.0.1:1080";
 var rules = [
   "||ip.cn", 
   "||ifconfig.me", 
-  "||netease.com", 
-  "||music.126.net", 
-  "||music.163.com", 
+  "||m10.music.126.net", 
+  "||music.163.com/eapi", 
+  "||music.163.com/api", 
   "||ipservice.163.com", 
   "||weibo.com", 
   "||xiami.com", 
