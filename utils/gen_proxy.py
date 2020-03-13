@@ -1,3 +1,5 @@
+import os
+
 proxy = ""
 f = open("backcn", "r")
 for line in f:
@@ -9,6 +11,7 @@ for line in f:
 f.close()
 
 # write file
-f = open("site/proxy", "w+")
+mode = 'a' if os.path.exists("site/proxy") else 'w'
+f = open("site/proxy", mode)
 f.write(proxy)
 f.close()
