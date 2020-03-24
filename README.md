@@ -27,9 +27,9 @@ https://raw.githubusercontent.com/yueyericardo/BackCN/master/backcn.txt
 4. Turn Shadowsocks on
 
 ## iOS - Shadowrocket
-1. Scan QR Code
+1. Scan QR Code  
 <img width=49% src="https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2020-03-24-IMG_3565.PNG">
-2. Chang Config File
+2. Chang Config File  
 https://github.com/yueyericardo/BackCN/blob/master/backcn.conf
 <p class="img" style="display: inline-flex;">
 <img width=49% src="https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2020-03-24-040051.png">
@@ -39,7 +39,7 @@ https://github.com/yueyericardo/BackCN/blob/master/backcn.conf
 <img width=49% src="https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2020-03-24-040212.png">
 <img width=49% src="https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2020-03-24-IMG_3569.PNG">
 </p>
-3. Start
+3. Start  
 <img width=49% src="https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2020-03-24-040251.png">
 
 ## Test
