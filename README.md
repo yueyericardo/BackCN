@@ -45,7 +45,6 @@ https://github.com/yueyericardo/BackCN/blob/master/backcn.conf
 
 ## Test
 https://ip.cn/
-![](https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2020-03-24-041105.png)
 
 
 #### 参考
