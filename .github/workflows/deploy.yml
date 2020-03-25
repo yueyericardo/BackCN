@@ -46,7 +46,7 @@ jobs:
         fi
     # gitpull
     - name: git pull
-      run: git pull
+      run: sleep 10; git pull
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
