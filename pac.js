@@ -7,6 +7,8 @@ var rules = [
   "||ip.cn", 
   "||ifconfig.me", 
   "||m10.music.126.net", 
+  "|http://music.163.com", 
+  "|https://music.163.com", 
   "||music.163.com/eapi", 
   "||music.163.com/weapi", 
   "||music.163.com/api", 
