@@ -50,7 +50,7 @@ jobs:
         fi
     # gitpull
     - name: git pull
-      run: sleep 10; git pull
+      run: sleep 10; git pull; echo ${GITHUB_REF##*/};
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
