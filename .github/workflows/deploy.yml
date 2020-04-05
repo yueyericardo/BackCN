@@ -50,8 +50,8 @@ jobs:
         fi
     # gitpull
     - name: git pull
-      run: sleep 10; git pull; echo ${GITHUB_REF##*/};
+      run: sleep 10; git pull;
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@${GITHUB_REF##*/}
       with:
         github_token: ${{ secrets.TOKEN }}
