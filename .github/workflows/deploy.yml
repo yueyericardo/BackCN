@@ -6,7 +6,9 @@ name: deploy
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - richard
   pull_request:
     branches: [ master ]
 
