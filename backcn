@@ -68,3 +68,9 @@
 ||passport.iqiyi.com
 ||cook.iqiyi.com
 ||t7z.cupid.iqiyi.com
+
+!bilibili
+||www.bilibili.com
+||api.bilibili.com
+||interface.bilibili.com
+||bangumi.bilibili.com/api
