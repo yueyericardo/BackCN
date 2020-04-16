@@ -4,6 +4,7 @@
 var proxy = "SOCKS5 127.0.0.1:1080";
 
 var rules = [
+  "||simuc.chem.ufl.edu", 
   "||ip.cn", 
   "||ifconfig.me", 
   "||m10.music.126.net", 
@@ -59,7 +60,6 @@ var rules = [
   "||api.bilibili.com", 
   "||interface.bilibili.com", 
   "||bangumi.bilibili.com/api", 
-  "||simuc.chem.ufl.edu", 
   "||google.com", 
   "||google.co.jp", 
   "||google.co.hk", 
