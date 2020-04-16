@@ -4,6 +4,7 @@
 var proxy = "SOCKS5 127.0.0.1:1080";
 
 var rules = [
+  "||simuc.chem.chem.ufl.edu", 
   "||ip.cn", 
   "||ifconfig.me", 
   "||m10.music.126.net", 
