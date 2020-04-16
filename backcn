@@ -4,8 +4,6 @@
 ! || for shadowrocket and site/proxy
 ! | could be parsed to pac.js
 
-!only for richard
-||simuc.chem.chem.ufl.edu
 
 !ip测试
 ||ip.cn
@@ -75,3 +73,6 @@
 ||api.bilibili.com
 ||interface.bilibili.com
 ||bangumi.bilibili.com/api
+
+!only for richard
+||simuc.chem.chem.ufl.edu
