@@ -59,7 +59,7 @@ var rules = [
   "||api.bilibili.com", 
   "||interface.bilibili.com", 
   "||bangumi.bilibili.com/api", 
-  "||simuc.chem.chem.ufl.edu", 
+  "||simuc.chem.ufl.edu", 
   "||google.com", 
   "||google.co.jp", 
   "||google.co.hk", 
