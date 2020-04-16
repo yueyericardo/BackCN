@@ -11,6 +11,7 @@ update-url = https://raw.githubusercontent.com/yueyericardo/BackCN/master/backcn
 
 [Rule]
 DOMAIN-SUFFIX,music.163.com,PROXY
+DOMAIN-SUFFIX,music.126.net,PROXY
 {}
 FINAL,DIRECT
 
