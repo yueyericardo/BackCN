@@ -4,6 +4,10 @@
 !|| for shadowrocket and site/proxy
 !| could be parsed to pac.js
 
+!only for richard
+||simuc.chem.ufl.edu
+||moria.chem.ufl.edu
+
 !ip测试
 ||ip.cn
 ||ifconfig.me
